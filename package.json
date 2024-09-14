@@ -4,9 +4,6 @@
   "description": "tg bot to see if all members of group chat are ready",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node -r dotenv/config dist/index.js",
-    "dev": "ts-node -r dotenv/config src/index.ts",
     "watch": "nodemon --watch src --exec ts-node -r dotenv/config src/index.ts"
   },
   "author": "Oleksii Nazarenko",
