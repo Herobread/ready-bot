@@ -1,26 +1,20 @@
-# Step 1: Use an official Node.js image as a base
-FROM node:18-alpine
+# Step 1: Use a Node.js base image
+FROM node:14
 
-# Step 2: Set the working directory in the container
+# Step 2: Set the working directory
 WORKDIR /usr/src/app
 
-# Step 3: Copy the package.json and package-lock.json (if available)
+# Step 3: Copy the package.json and package-lock.json files
 COPY package*.json ./
 
-# Step 4: Install dependencies
+# Step 4: Install the dependencies
 RUN npm install
 
-# Step 5: Copy the rest of the application files
+# Step 5: Copy the rest of the application code
 COPY . .
 
-# Step 6: Build the TypeScript files
-RUN npm run build
-
-# Step 7: Expose the port that the bot will run on (if applicable, adjust if needed)
+# Step 6: Expose the port (adjust if needed)
 EXPOSE 3000
 
-# Step 8: Define the environment variable for the bot (ensure .env is copied)
-ENV NODE_ENV=production
-
-# Step 9: Start the bot using the production script
+# Step 7: Run the application in development mode
 CMD ["npm", "run", "dev"]
