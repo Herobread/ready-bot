@@ -1,22 +1,22 @@
 {
-  "name": "ready-bot",
-  "version": "1.0.0",
-  "description": "tg bot to see if all members of group chat are ready",
-  "main": "index.js",
-  "scripts": {
-    "watch": "nodemon --watch src --exec ts-node -r dotenv/config src/index.ts"
-  },
-  "author": "Oleksii Nazarenko",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^22.5.4",
-    "@types/node-telegram-bot-api": "^0.64.7",
-    "nodemon": "^3.1.4",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.2"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.5",
-    "node-telegram-bot-api": "^0.66.0"
-  }
+    "name": "ready-bot",
+    "version": "1.0.0",
+    "description": "tg bot to see if all members of group chat are ready",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon --watch src --exec ts-node -r dotenv/config src/index.ts"
+    },
+    "author": "Oleksii Nazarenko",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^22.5.4",
+        "@types/node-telegram-bot-api": "^0.64.7",
+        "nodemon": "^3.1.4",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.2"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "node-telegram-bot-api": "^0.66.0"
+    }
 }
